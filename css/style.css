@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    font-family: "FiraSans", sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-height: 100vh;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+.section_main, header, footer {
+    width: 100%;
+}
+
+/* HEADER SECTION */
+.header {
+    box-sizing: border-box;
+    background-color: #009688; 
+}
+
+/* NAVBAR SECTION */
+.logo {
+    width: 40px;
+    border-radius: 50%;
+    border: 10px #fff;
+}
+
+.nav {
+    background-color: #e0f2f1; 
+    display: flex;
+    padding: 20px 40px; 
+    flex-wrap: wrap;
+}
+
+.nav_ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav_item {
+    list-style: none;
+}
+
+.nav_link {
+    color: #004d40; 
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 0;
+    transition: background-color 0.3s, border-radius 0.2s;
+    font-size: 20px;
+}
+
+.nav_link:hover {
+    background-color: #009688; /* claro al pasar el mouse */
+    border-radius: 20px;
+}
+
+/* SECTION MAIN */
+main, aside {
+    width: 100%; /* todo el ancho */
+    border: none; /* Elimina el borde si es necesario */
+}
+
+.section_main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 50vh; 
+    background-image: url('../asset/img/logo.png'); 
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+    color: white; 
+    padding-top: 80px;
+}
+
+.section_main::before {
+    content: ""; 
+    position: absolute; /* Posiciona el pseudo-elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente para resaltar el texto */
+    z-index: 1; /* Asegura que el pseudo-elemento esté detrás del texto */
+}
+
+.section_main > div {
+    position: relative; /* Posiciona el contenido en relación al contenedor */
+    z-index: 2; /* Asegura que el texto esté delante del pseudo-elemento */
+    margin-top: 80px; /* Aumenta el margen superior para evitar superposición */
+    text-align: center; /* Centra el texto */
+}
+
+.section_main aside {
+    flex-grow: 1;
+}
+
+.imagen_principal {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    box-shadow: 0 0 40px rgba(0, 40, 0, 0.2); /* Sombra suave */
+    margin: 0 auto; /* Centra la imagen en el contenedor */
+    display: block; /* Asegura que la imagen sea un bloque */
+}
+
+.titulo_principal {
+    font-size: 6em; /* Ajusta el tamaño de fuente */
+    color: #0cae55; /* Jade oscuro */
+    text-align: center; /* Centra el texto */
+    margin: 80px 0 20px; /* Aumenta el margen superior */
+    text-shadow: 2px 2px 5px rgba(72, 182, 164, 0.515); /* Sombra del texto */
+    line-height: 1.1; /* Mejora el espaciado entre líneas */
+    max-width: 90%; /* Limita el ancho del título */
+    overflow-wrap: break-word; /* Permite que el texto se divida si es necesario */
+}
+
+.slogan {
+    font-size: 2.5em; /* Tamaño de fuente mediano */
+    color: #ffffff; /* Jade claro */
+    text-align: center; /* Centra el texto */
+    margin: 15px 0; /* Margen superior e inferior */
+    font-weight: 500; /* Peso de fuente semi-negrita */
+    font-family: "FiraSans", sans-serif; /* Tipo de letra */
+    border-bottom: 2px solid #e0f2f1; /* Línea inferior en jade muy claro */
+    padding-bottom: 80px; /* Espacio debajo del texto */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Sombra del texto */
+}
+
+.parrafo_lindo_entrada {
+    font-family: "consola";
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 20px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.setion_mision{
+    font-family: "FiraSans";
+    font-size: 16px;
+    font-weight: 600;
+    color: #009688;
+    font-weight: 500;
+    margin: 20px;
+    text-align: justify;
+    padding:20px;
+}
+
+/* ASIDE */
+aside {
+    display: flex; /* Establece un contenedor flex */
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin: 20px 0; /* Margen alrededor del aside, ajusta si es necesario */
+    width: 100%; /* Asegura que el aside ocupe todo el ancho */
+    padding: 20px;
+}
+
+.titulo_secundario {
+    font-size: 1.8em; /* Tamaño de fuente mediano */
+    color: #009688; /* Jade claro */
+    text-align:start; /* Centra el texto */
+    margin: 15px 0; /* Margen superior e inferior */
+    font-weight: 500; /* Peso de fuente semi-negrita */
+    font-family: "FiraSans", sans-serif; /* Tipo de letra */
+    border-bottom: 2px solid #e0f2f1; /* Línea inferior en jade muy claro */
+    padding-bottom: 10px; /* Espacio debajo del texto */
+    padding-left: 20px;
+}
+
+.div_aside {
+    flex: 1; /* Permite que este div crezca para ocupar espacio */
+    margin: 20px; /* Espacio entre los dos divs */
+    border: #0cae55;
+    padding: 10px;
+}
+
+.parrafo_lindo {
+    font-family: "consola";
+    font-weight: 500;
+    justify-content: center;
+    margin: 40px;
+    text-align: justify;
+}
+
+.imagen_destacada {
+    width: 600px; /* Hace que la imagen ocupe el 100% del contenedor */
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 0 40px rgba(0, 40, 0, 0.2); /* Sombra suave */
+    margin: 0 auto; /* Centra la imagen en el contenedor */
+    display: block; /* Asegura que la imagen sea un bloque */
+}
+
+.imagen_destacada:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* FOOTER */
+footer {
+    margin-top: auto; /* Esto asegura que el footer esté al final */
+    border-top: 1px solid #b2e0d7; /* Borde superior en un tono más claro de jade */
+    background-color: #009688; /* Color jade claro */
+    color: #ffffff; /* Texto blanco */
+    display: flex; /* Alinea los elementos en fila */
+    justify-content: space-between; /* Espacio entre logos y copyright */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 20px; /* Espaciado interno */
+}
+
+.redesSociales {
+    display: flex; /* Asegura que los íconos estén en línea */
+}
+
+.redesSociales a {
+    color: #ffffff; /* Íconos en blanco */
+    font-size: 28px; /* Tamaño del ícono */
+    margin: 0 15px; /* Espacio entre íconos */
+    transition: color 0.3s; /* Efecto de transición al pasar el mouse */
+}
+
+.redesSociales a:hover {
+    color: #e0f2f1; /* Color jade muy claro al pasar el mouse */
+}
+
+.copyright {
+    color: #ffffff; 
+    font-size: 18px; /* Tamaño de fuente */
+    text-align: center;
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
+    padding-right: 40%;
+}
+
+
+
+/* HOJA DE CONTACTO */
+.titulo_formulario {
+    text-align: center;
+    margin: 10px 0 20px; /* Ajuste de margen */
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.bodycontacto {
+    margin: 0;
+
+}
+
+.form {
+    background-color: #bed;
+    max-width: 800px; /* Establece un ancho máximo de 800px */
+    width: 100%; /* Asegura que use el 100% hasta el máximo */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    box-shadow: 0px 0px 40px #0004;
+    border-radius: 8px;
+    padding: 20px; /* Agrega padding interno */
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+.form_input {
+    padding: 10px 20px;
+}
+
+.input_contacto,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px 12px;
+    border: none;
+    border: 1px solid #068;
+    box-shadow: 0px 0px 15px #0003;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #068;
+    font-family: "FiraSans";
+}
+
+textarea {
+    min-width: 100%;
+    resize: none;
+    font-family: "FiraSans";
+    min-inline-size: 102px;
+}
+
+label {
+    font-size: 0.88em;
+    line-height: 2;
+}
+
+.checkbox {
+    width: auto;
+    height: 10px;
+}
+
+.option {
+    background: #bed;
+}
+
+.info-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente en el centro */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.informacion_map {
+    flex: 1; /* Hace que el mapa ocupe el espacio disponible */
+}
+
+.info-details {
+    flex: 1; /* Hace que la información ocupe el espacio disponible */
+}
+
+/* hoja de productos */
+.button_lo_quiero {
+    background-color: #098; /* Color de fondo del botón */
+    color: rgb(255, 255, 255); /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    margin-left: 90%;
+    margin-bottom: 30px;
+}
+
+.button_lo_quiero:hover {
+    background-color: #7a7; /* Color al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+.titulo_producto{
+    color: #098;
+    font-size: 50px;
+    text-align: center;
+
+}
+.section_produto {
+    display: flex; /* Activa el modelo de caja flex */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+    margin: 20px 0; /* Margen superior e inferior para separación */
+}
+
+.div_aside_producto {
+    flex: 1; /* Permite que este div crezca para ocupar espacio */
+    margin: 20px; /* Espacio entre los dos divs */
+    padding: 10px;
+}
+button>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*hoja de tarifas*/
+.precio{
+    font-size: 30px;
+    margin-left: 86%;
+    margin-bottom: 2px;
+}
+.boton-personalizado {
+    background-color: #098; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.boton-personalizado:hover {
+    background-color: #7a7; /* Color al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
