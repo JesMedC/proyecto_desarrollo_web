@@ -205,8 +205,9 @@ div, body {
 /* Asegúrate de que las imágenes sean responsivas */
 .imagen_destacada {
     width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 8px; /* Bordes redondeados */
+    height: 50%; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 1%;
 }
 
 /* Títulos de las tarjetas */
@@ -230,7 +231,7 @@ div, body {
 .card {
     border: 1px solid #ddd; /* Borde suave */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
     display: flex;
     flex-direction: column;
 }
