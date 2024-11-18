@@ -101,51 +101,167 @@ div, body {
 
 
 
-/*----- DESDE AQUI ------*
+/*----- HOME ------*/
 
 
-
-
-
-
-/* NAVBAR - Barra de navegación */
-.nav {
-    background-color: #e0f2f1; /* Fondo claro para la navbar */
-    display: flex; /* Flexbox para los elementos dentro del navbar */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
-    justify-content: space-between; /* Espacio entre los elementos */
-    padding: 20px; /* Espaciado interno */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-}
-
-/* Estilo para los elementos de lista en el navbar */
-.nav_ul {
+/* SECCIÓN PRINCIPAL */
+.section_main {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #009688;
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-/* Estilo para cada item de la lista */
-.nav_item {
-    list-style: none;
+.titulo_principal {
+    font-size: 4rem;
+    margin: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para los enlaces en la barra de navegación */
-.nav_link {
-    color: #004d40; /* Color del enlace */
-    text-decoration: none; /* Elimina el subrayado */
-    display: inline-block;
-    padding: 10px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
-    border-radius: 4px; /* Bordes redondeados */
-    transition: background-color 0.3s, border-radius 0.2s; /* Efecto al pasar el mouse */
+.slogan {
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para los enlaces al pasar el mouse */
-.nav_link:hover {
-    background-color: #009688; /* Cambio de fondo al pasar el mouse */
-    border-radius: 20px; /* Bordes más redondeados */
+/* SECCIÓN MISIÓN */
+.setion_mision {
+
+    line-height: 1.8;
+    font-weight: 400;
+    margin-top: 20px;
+    padding: 5%;
+    font-family: "Consolas", monospace;
+    font-size: 1.1rem; /* Tamaño de fuente ajustado */
+    color: #098; /* Color de texto gris */
+    text-align: justify;
 }
+
+.parrafo_lindo_entrada {
+    font-family: "Consolas", monospace;
+    font-size: 1rem;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+    .titulo_principal {
+        font-size: 3rem; /* Ajustamos el tamaño del título para pantallas grandes */
+    }
+    .slogan {
+        font-size: 1.5rem; /* Ajustamos el tamaño del slogan para pantallas grandes */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .titulo_principal {
+        font-size: 2.5rem; /* Ajustamos el tamaño del título en tabletas */
+    }
+    .slogan {
+        font-size: 1.3rem; /* Ajustamos el tamaño del slogan en tabletas */
+    }
+
+    .section_main {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo_principal {
+        font-size: 2rem; /* Ajustamos el tamaño del título en móviles */
+    }
+    .slogan {
+        font-size: 1.2rem; /* Ajustamos el tamaño del slogan en móviles */
+    }
+
+    .section_main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .setion_mision {
+        font-family: "Consolas", monospace;
+        font-size: 1em; /* Tamaño de fuente ajustado */
+        color: #098; /* Color de texto gris */
+        text-align: justify;
+        padding: 2%;
+    }
+}
+
+
+
+
+/*--- CARD DE INFORMACION --*/
+
+
+/* Asegúrate de que las imágenes sean responsivas */
+.imagen_destacada {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Títulos de las tarjetas */
+.titulo_secundario {
+    font-size: 1.8em; /* Ajuste para títulos más pequeños */
+    color: #009688; /* Color jade */
+    text-align: center; /* Centra el texto */
+    font-weight: 500; /* Peso de fuente semi-negrita */
+
+}
+
+/* Párrafos dentro de las tarjetas */
+.parrafo_lindo {
+    font-family: "Consolas", monospace;
+    font-size: 1em; /* Tamaño de fuente ajustado */
+    color: #555; /* Color de texto gris */
+    text-align: justify;
+}
+
+/* Asegura que las tarjetas tengan un margen */
+.card {
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card body */
+.card-body {
+    padding: 20px; /* Espaciado interno */
+    flex-grow: 1; /* Hace que el body de la tarjeta crezca y ocupe el espacio restante */
+}
+
+/* Asegura que las tarjetas tengan el mismo tamaño */
+.card.h-100 {
+    height: 100%; /* Asegura que las tarjetas tengan el mismo alto */
+}
+
+/* Hacer que ambas tarjetas tengan la misma altura en pantallas grandes */
+.row {
+    display: flex; /* Usamos flexbox para que las tarjetas tengan el mismo tamaño */
+    flex-wrap: wrap; /* Asegura que se ajusten bien en pantallas pequeñas */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .titulo_secundario {
+        font-size: 1.5em; /* Ajustamos el tamaño del título para pantallas pequeñas */
+    }
+    .parrafo_lindo {
+        font-size: 0.9em; /* Ajustamos el tamaño del párrafo para pantallas pequeñas */
+    }
+}
+
 
 /* SECTION MAIN - Estilo para la sección principal */
 .section_main {
@@ -169,7 +285,7 @@ div, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
     z-index: 1; /* Asegura que esté debajo del texto */
 }
 
@@ -202,136 +318,81 @@ div, body {
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Sombra de texto */
 }
 
-/* FOOTER - Estilo del pie de página */
+
+
+/* ---- FOOTTER----*/
+
+/* Estilo básico para el pie de página */
 footer {
-    margin-top: auto; /* Asegura que el footer esté al final */
-    border-top: 1px solid #b2e0d7; /* Borde superior claro */
-    background-color: #009688; /* Fondo jade */
+    background-color: #009688; /* Fondo oscuro */
     color: #ffffff; /* Texto blanco */
-    display: flex; /* Flexbox para los elementos del footer */
-    justify-content: space-between; /* Espacio entre elementos */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 20px; /* Espaciado interno */
+    padding: 0.3rem 0; /* Espaciado superior e inferior */
+    position: relative; /* Asegura que el pie de página no se desplace */
+    width: 100%; /* Asegura que ocupe el 100% del ancho de la pantalla */
+    text-align: center; /* Texto centrado por defecto */
 }
 
-/* MEDIA QUERIES */
+/* Estilo para los enlaces de redes sociales */
+.social-icon {
+    font-size: 1.5rem; /* Tamaño de los iconos */
+    color: #ffffff; /* Color blanco para los iconos */
+    margin: 0 20px; /* Margen horizontal entre los iconos */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
 
-/* Para pantallas de menos de 768px (tabletas y dispositivos pequeños) */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column; /* Mueve los elementos a una columna */
-        align-items: center; /* Centra los elementos */
-        padding: 10px; /* Reduce el espaciado */
+/* Efecto hover para los iconos de redes sociales */
+.social-icon:hover {
+    color: #009688; /* Color de los iconos al pasar el ratón (puedes elegir otro color) */
+}
+
+/* Estilo para la sección de copyright */
+footer .copyright {
+    margin-top: 0rem; /* Separación entre los iconos y el texto */
+    font-size: 0.9rem; /* Tamaño de texto para el copyright */
+    color: #ccc; /* Color más suave para el texto */
+}
+
+/* Responsividad: Asegurar que los iconos se alineen correctamente en dispositivos pequeños */
+@media (max-width: 767px) {
+    /* Los iconos de redes sociales se hacen más grandes en dispositivos móviles */
+    .social-icon {
+        font-size: 1rem; /* Aumenta el tamaño de los íconos en móviles */
+        margin: 0 10px; /* Reduce el margen entre los iconos */
     }
 
-    .nav_link {
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-        padding: 8px; /* Reduce el padding */
+    /* Asegurar que el texto de copyright también se vea bien en pantallas pequeñas */
+    footer .copyright {
+        font-size: 0.85rem; /* Un poco más pequeño el texto de copyright */
     }
+}
 
-    .titulo_principal {
-        font-size: 4em; /* Reduce el tamaño del título */
-    }
-
-    .slogan {
-        font-size: 2em; /* Reduce el tamaño del slogan */
-        padding-bottom: 40px; /* Reduce el padding inferior */
-    }
-
-    .section_main {
-        height: 60vh; /* Aumenta la altura de la sección principal */
-    }
-
-    .imagen_principal {
-        width: 80%; /* La imagen ocupa el 80% del ancho */
-        max-width: 400px; /* Máximo de 400px de ancho */
-    }
-
-    .section_produto {
-        flex-direction: column; /* Coloca los productos en una columna */
-        gap: 20px; /* Espacio entre los productos */
-    }
-
+/* Para pantallas medianas y grandes */
+@media (min-width: 768px) {
     footer {
-        flex-direction: column; /* Coloca los elementos del footer en columna */
-        text-align: center; /* Centra el texto */
+        text-align: left; /* Alinea el contenido a la izquierda en pantallas más grandes */
+    }
+
+    footer .copyright {
+        text-align: right; /* Alinea el copyright a la derecha en pantallas grandes */
+        font-size: 1rem; /* Tamaño de texto para pantallas grandes */
+    }
+
+    .social-icon {
+        font-size: 1.8rem; /* Tamaño de iconos ajustado para pantallas grandes */
+        margin: 0 15px; /* Asegura que haya un buen espaciado entre los iconos */
     }
 }
 
-/* Para pantallas de menos de 480px (móviles pequeños) */
-@media (max-width: 480px) {
-    .nav {
-        flex-direction: column; /* Coloca los elementos en una columna */
-        justify-content: center; /* Centra los elementos */
-    }
-
-    .nav_link {
-        font-size: 12px; /* Tamaño de fuente pequeño */
-        padding: 6px; /* Reduce el padding */
-    }
-
-    .titulo_principal {
-        font-size: 3.5em; /* Reduce el tamaño del título */
-    }
-
-    .slogan {
-        font-size: 1.8em; /* Reduce el tamaño del slogan */
-    }
-
-    .section_main {
-        height: 70vh; /* Aumenta la altura de la sección principal */
-    }
-
-    .imagen_principal {
-        width: 90%; /* La imagen ocupa el 90% del ancho */
-        max-width: 300px; /* Máximo de 300px de ancho */
-    }
-
-    .form_input, .input_contacto, textarea {
-        width: 100%; /* Asegura que los campos de entrada ocupen todo el ancho */
-        padding: 10px; /* Añade padding */
-    }
-
-    .section_produto {
-        flex-direction: column; /* Coloca los productos en columna */
-        gap: 20px; /* Añade espacio entre los productos */
-    }
-
-    footer {
-        flex-direction: column; /* Coloca los elementos del footer en columna */
-        align-items: center; /* Centra los elementos */
-        padding: 20px; /* Añade padding */
-    }
-
-    .copyright {
-        font-size: 14px; /* Reduce el tamaño de la fuente del copyright */
-    }
-}
-
-/* Para pantallas grandes de escritorio */
+/* Para pantallas grandes, aseguramos que el footer ocupe todo el ancho sin problemas */
 @media (min-width: 1200px) {
-    .section_main {
-        height: 50vh; /* Mantiene la altura original */
-    }
-
-    .titulo_principal {
-        font-size: 7em; /* Aumenta el tamaño del título */
-    }
-
-    .slogan {
-        font-size: 3em; /* Aumenta el tamaño del slogan */
-    }
-
-    .imagen_principal {
-        width: 50%; /* La imagen ocupa el 50% del ancho */
-    }
-
-    .section_produto {
-        gap: 30px; /* Aumenta el espacio entre productos */
+    footer {
+        padding: 2rem 5rem; /* Aumenta el padding en pantallas muy grandes */
     }
 }
 
 
+
+/* ----HASTA AQUI ------*/
 
 
 

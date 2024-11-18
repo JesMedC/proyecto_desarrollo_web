@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Incluir Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Enlace a la hoja de estilos de FontAwesome (Para íconos) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/font.css" />
@@ -71,37 +73,64 @@
         </section>
     </main>
 
-    <!-- Sección de contenido adicional -->
-    <aside>
-        <div class="div_aside">
-            <img src="./asset/img/producto_tres.jpeg" alt="imagen de capacitacion financiera" class="imagen_destacada">
-            <h2 class="titulo_secundario">Transforma Tu Futuro con Nuestra Capacitación Financiera</h2>
-            <p class="parrafo_lindo">En Jade Capital, ofrecemos la mejor capacitación financiera del mercado, diseñada para empoderar a nuestros clientes con las herramientas y conocimientos necesarios para tomar decisiones financieras informadas. Nuestro programa combina teoría y práctica, impartido por expertos con años de experiencia en el sector...</p>
-        </div>
-        <div class="div_aside">
-            <img src="./asset/img/testimonio_1.jpeg" alt="imagen de una chica" class="imagen_destacada">
-            <h2 class="titulo_secundario">Lo Que Nuestros Alumnos Dicen: Recomendaciones que Hablan por Sí Mismas</h2>
-            <p class="parrafo_lindo">En Jade Capital, la satisfacción de nuestros alumnos es nuestra mayor recompensa...</p>
-        </div>
-    </aside>
 
-    <!-- Pie de página (footer) -->
-    <footer>
-        <div class="redesSociales">
-            <a href="https://api.whatsapp.com/send?phone=+56954524216&text=Hola%20quisiera%20saber%" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+<!-- Sección de contenido adicional -->
+<aside class="container mt-5">
+    <div class="row">
+
+        <!-- Primera tarjeta de capacitación financiera -->
+        <div class="col-md-6 col-sm-12 mb-4">
+            <div class="card h-100"> <!-- La clase h-100 asegura que las tarjetas tengan el mismo alto -->
+                <img src="./asset/img/producto_tres.jpeg" class="card-img-top imagen_destacada" alt="imagen de capacitación financiera">
+                <div class="card-body">
+                    <h5 class="card-title titulo_secundario">Transforma Tu Futuro con Nuestra Capacitación Financiera</h5>
+                    <p class="card-text parrafo_lindo">En Jade Capital, ofrecemos la mejor capacitación financiera del mercado, diseñada para empoderar a nuestros clientes con las herramientas y conocimientos necesarios para tomar decisiones financieras informadas. Nuestro programa combina teoría y práctica, impartido por expertos con años de experiencia en el sector...</p>
+                </div>
+            </div>
         </div>
-        <div class="copyright">
-            <p> Jade Capital - © copyright 2024</p>
+
+        <!-- Segunda tarjeta de testimonios -->
+        <div class="col-md-6 col-sm-12 mb-4">
+            <div class="card h-100"> <!-- La clase h-100 asegura que las tarjetas tengan el mismo alto -->
+                <img src="./asset/img/testimonio_1.jpeg" class="card-img-top imagen_destacada" alt="imagen de una chica">
+                <div class="card-body">
+                    <h5 class="card-title titulo_secundario">Lo Que Nuestros Alumnos Dicen: Recomendaciones que Hablan por Sí Mismas</h5>
+                    <p class="card-text parrafo_lindo">En Jade Capital, la satisfacción de nuestros alumnos es nuestra mayor recompensa...</p>
+                </div>
+            </div>
         </div>
-    </footer>
+
+    </div>
+</aside>
+
+
+
+<!-- Pie de página (footer) -->
+<footer>
+    <div class="container-fluid"> <!-- Cambié container a container-fluid para ocupar todo el ancho -->
+        <div class="row">
+            <!-- Sección de redes sociales -->
+            <div class="col-12 col-md-5 text-center text-md-start mb-3">
+                <a href="https://api.whatsapp.com/send?phone=+56954524216&text=Hola%20quisiera%20saber%" target="_blank" class="social-icon mx-2">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" class="social-icon mx-2">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon mx-2">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Sección de copyright -->
+            <div class="col-12 col-md-5 text-md-start">
+                <p class="mb-0">Jade Capital - © copyright 2024</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
