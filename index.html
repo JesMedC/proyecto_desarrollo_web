@@ -2,100 +2,92 @@
 <html lang="es">
 
 <head>
-    <!-- Definición de la codificación de caracteres -->
     <meta charset="UTF-8">
-    <!-- Para que la página sea responsiva en diferentes dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Enlace al archivo CSS para el estilo de la página -->
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Enlace a otro archivo CSS para fuentes (tipografías) -->
     <link rel="stylesheet" href="./css/font.css" />
-    <!-- Icono del sitio (favicon) que aparece en la pestaña del navegador -->
     <link rel="shortcut icon" href="./asset/img/favicon.ico" type="image/x-icon" />
-    <!-- Inclusión de la librería FontAwesome para usar íconos -->
     <script src="https://kit.fontawesome.com/98fc235873.js" crossorigin="anonymous"></script>
-    <!-- Título que aparecerá en la pestaña del navegador -->
     <title>Jade Capital - Home</title>
 </head>
 
 <body>
-    <!-- Sección de encabezado (header) con el logo y la barra de navegación -->
+    <!-- Header y Navbar -->
     <header class="header">
-        <nav class="nav">
-            <div>
-                <!-- Enlace al home de la página -->
-                <a href="./index.html">
-                    <!-- Imagen del logo de Jade Capital -->
-                    <img src="./asset/img/logo.png" alt="Jade Capital logotipo" class="logo">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+            <div class="container-fluid">
+                <!-- Enlace al home con logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./asset/img/logo.png" alt="Jade Capital logotipo" class="logo" width="150">
                 </a>
-            </div>
-            <div>
-                <!-- Menú de navegación con enlaces a diferentes páginas -->
-                <ul class="nav_ul">
-                    <li class="nav_item"><a href="#" class="nav_link">Inicio</a></li>
-                    <li class="nav_item"><a href="./pages/productos.html" class="nav_link">Productos</a></li>
-                    <li class="nav_item"><a href="./pages/tarifas.html" class="nav_link">Tarifas</a></li>
-                    <li class="nav_item"><a href="./pages/contacto.html" class="nav_link">Contacto</a></li>
-                    <li class="nav_item"><a href="./pages/testimonios.html" class="nav_link">Testimonios</a></li>
-                </ul>
+        
+                <!-- Botón para el menú en dispositivos pequeños (hamburguesa) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Items del menú -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/tarifas.html">Tarifas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/testimonios.html">Testimonios</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <!-- Sección principal del contenido de la página -->
+    <!-- Sección principal de contenido -->
     <main>
-        <!-- Primera sección que contiene el título principal y el lema -->
-        <section class="section_main">
+        <section class="section_main mt-5 pt-5">
             <div>
                 <h1 class="titulo_principal">JADE CAPITAL</h1>
                 <h2 class="slogan">La mejor opción para tu futuro</h2>
             </div>
         </section>
 
-        <!-- Sección sobre la misión de la empresa -->
         <section class="setion_mision">
             <p class="parrafo_lindo_entrada"></p>
-                <!-- Texto que describe la misión de Jade Capital -->
-                En Jade Capital, nuestra misión es empoderar a las personas y organizaciones con los conocimientos y herramientas necesarios para alcanzar la estabilidad y el éxito financiero. Nos especializamos en educación financiera integral y gestión de riesgos, ofreciendo programas diseñados para todos, desde principiantes hasta profesionales experimentados.
-                <br><br>
-                Creemos que la educación es la clave para tomar decisiones financieras informadas y seguras. Nuestros cursos abarcan desde la planificación financiera personal hasta la gestión avanzada de inversiones y riesgos, impartidos por expertos con años de experiencia en el sector. Utilizamos métodos interactivos y prácticos que garantizan que cada alumno no solo aprenda, sino que aplique lo aprendido en su vida diaria.
-            </p>
+            En Jade Capital, nuestra misión es empoderar a las personas y organizaciones con los conocimientos y herramientas necesarios para alcanzar la estabilidad y el éxito financiero. Nos especializamos en educación financiera integral y gestión de riesgos, ofreciendo programas diseñados para todos, desde principiantes hasta profesionales experimentados.
+            <br><br>
+            Creemos que la educación es la clave para tomar decisiones financieras informadas y seguras. Nuestros cursos abarcan desde la planificación financiera personal hasta la gestión avanzada de inversiones y riesgos, impartidos por expertos con años de experiencia en el sector. Utilizamos métodos interactivos y prácticos que garantizan que cada alumno no solo aprenda, sino que aplique lo aprendido en su vida diaria.
         </section>
     </main>
-    
-    <!-- Sección de contenido adicional en un aside -->
+
+    <!-- Sección de contenido adicional -->
     <aside>
-        <!-- Primer bloque destacado dentro del aside -->
-        <div classe="div_aside">
-            <!-- Imagen que representa la capacitación financiera -->
+        <div class="div_aside">
             <img src="./asset/img/producto_tres.jpeg" alt="imagen de capacitacion financiera" class="imagen_destacada">
-            <!-- Título de la sección secundaria -->
             <h2 class="titulo_secundario">Transforma Tu Futuro con Nuestra Capacitación Financiera</h2>
-
-            <!-- Descripción sobre los programas de capacitación financiera -->
-            <p class="parrafo_lindo">En Jade Capital, ofrecemos la mejor capacitación financiera del mercado, diseñada para empoderar a nuestros clientes con las herramientas y conocimientos necesarios para tomar decisiones financieras informadas. Nuestro programa combina teoría y práctica, impartido por expertos con años de experiencia en el sector. A través de nuestros cursos, aprenderás a gestionar tus finanzas personales, invertir inteligentemente y maximizar tus recursos. Nos enorgullece ofrecer un enfoque personalizado, adaptando nuestros contenidos a las necesidades de cada participante. Únete a nosotros y transforma tu futuro financiero con Jade Capital, donde tu éxito es nuestra prioridad.</p>
+            <p class="parrafo_lindo">En Jade Capital, ofrecemos la mejor capacitación financiera del mercado, diseñada para empoderar a nuestros clientes con las herramientas y conocimientos necesarios para tomar decisiones financieras informadas. Nuestro programa combina teoría y práctica, impartido por expertos con años de experiencia en el sector...</p>
         </div>
-
-        <!-- Segundo bloque destacado con testimonios de alumnos -->
-        <div classe="div_aside">
-            <!-- Imagen de un testimonio -->
+        <div class="div_aside">
             <img src="./asset/img/testimonio_1.jpeg" alt="imagen de una chica" class="imagen_destacada">
-            <!-- Título sobre las recomendaciones de los alumnos -->
             <h2 class="titulo_secundario">Lo Que Nuestros Alumnos Dicen: Recomendaciones que Hablan por Sí Mismas</h2>
-
-            <!-- Descripción sobre los testimonios y la satisfacción de los alumnos -->
-            <p class="parrafo_lindo">En Jade Capital, la satisfacción de nuestros alumnos es nuestra mayor recompensa. Nos enorgullece escuchar cómo nuestros programas de capacitación financiera han impactado positivamente en sus vidas. Nuestros alumnos destacan la calidad de la enseñanza y la dedicación de nuestros instructores, quienes ofrecen un enfoque práctico y personalizado que facilita el aprendizaje.
-
-                Muchos de ellos nos recomiendan por la transformación que han experimentado: desde la mejora en la gestión de sus finanzas personales hasta la confianza adquirida para realizar inversiones exitosas. Sus testimonios reflejan no solo el conocimiento adquirido, sino también la comunidad de apoyo que hemos creado.
-                
-                En Jade Capital, cada recomendación es un testimonio de nuestro compromiso con la excelencia y nuestro deseo de ver a nuestros alumnos alcanzar su máximo potencial. ¡Únete a nosotros y descubre por qué nuestros estudiantes nos recomiendan!</p>
+            <p class="parrafo_lindo">En Jade Capital, la satisfacción de nuestros alumnos es nuestra mayor recompensa...</p>
         </div>
     </aside>
 
-    <!-- Sección de pie de página (footer) con enlaces a redes sociales -->
+    <!-- Pie de página (footer) -->
     <footer>
         <div class="redesSociales">
-            <!-- Enlaces a WhatsApp, YouTube e Instagram -->
             <a href="https://api.whatsapp.com/send?phone=+56954524216&text=Hola%20quisiera%20saber%" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
@@ -106,10 +98,13 @@
                 <i class="fa-brands fa-instagram"></i>
             </a>
         </div>
-        <!-- Información de derechos de autor -->
         <div class="copyright">
             <p> Jade Capital - © copyright 2024</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
