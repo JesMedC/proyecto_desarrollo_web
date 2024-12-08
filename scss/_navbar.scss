@@ -1,0 +1,56 @@
+// _navbar.scss
+
+
+@use 'mixins';
+@use 'variables' as *; // Esto importa las variables definidas en _variables.scss
+
+
+// Estilo para el fondo de la navbar
+.navbar {
+    background-color: $color-primary !important;
+    padding: 10px 20px !important;
+    @include mixins.box-shadow(0, 4px, 6px, rgba(0, 0, 0, 0.1));
+}
+
+// Logo
+.navbar .navbar-brand img {
+    width: 70px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    @include mixins.transition(transform, 0.3s, ease);
+}
+
+.navbar .navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+// Estilo para los enlaces de la navbar
+.navbar-nav .nav-item .nav-link {
+    color: $color-light;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    @include mixins.transition(background-color 0.3s, color 0.3s);
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: $color-dark;
+    color: $color-light;
+}
+
+.navbar-toggler-icon {
+    background-color: $color-light;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: $color-dark;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 18px;
+    }
+}

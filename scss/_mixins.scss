@@ -1,0 +1,27 @@
+// _mixins.scss
+
+// Mixin para sombras
+@mixin box-shadow($x: 0, $y: 4px, $blur: 6px, $color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: $x $y $blur $color;
+  }
+  
+// Mixin para transiciones
+@mixin transition($property, $time: 0.3s, $ease: ease) {
+    transition: $property $time $ease;
+}
+
+  
+  // Mixin para bordes redondeados
+  @mixin border-radius($radius: 4px) {
+    border-radius: $radius;
+  }
+  
+  // Mixin para aplicar sombra al texto
+@mixin text-shadow($color, $x, $y, $blur) {
+    text-shadow: $x $y $blur $color;
+}
+// mixins.scss
+
+@mixin transition1($properties, $duration: 0.3s, $timing: ease) {
+    transition: $properties $duration $timing;
+}

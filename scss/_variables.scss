@@ -1,0 +1,48 @@
+// ----------- FUENTES -------------
+$font-primary: 'Fira Sans', sans-serif;   // Fuente primaria
+$font-secondary: 'Georgia', serif;       // Fuente secundaria
+$font-tertiary: 'Consolas', monospace;   // Fuente para código o texto especial
+
+// ----------- COLORES -------------
+$color-primary: #009688;     // Color principal
+$color-secondary: #006659;   // Color secundario
+$color-tertiary: #0cae55; 
+$color-letras:#098;   // Color terciario
+
+$color-light: #fff;       // Blanco
+$color-dark: #333333;        // Gris oscuro
+$color-gray-light: #f4f4f4; // Gris claro
+$color-gray-dark: #777777;  // Gris más oscuro
+$color-success: #28a745;     // Éxito (verde)
+$color-danger: #dc3545;      // Peligro (rojo)
+$color-warning: #ffc107;     // Advertencia (amarillo)
+$color-info: #17a2b8;        // Información (azul)
+
+$color-border: #ddd;         // Color del borde
+$color-shadow: rgba(0, 0, 0, 0.2); // Sombra suave
+
+// ----------- TAMAÑOS Y ESPACIADOS -------------
+$font-size-base: 16px;       // Tamaño base de la fuente
+$font-size-sm: 14px;         // Tamaño pequeño
+$font-size-lg: 18px; 
+$font-size-titulo: 6rem;        // Tamaño grande
+$font-size-slogan: 3rem; 
+$font-size-1em: 1.3em; 
+
+
+$line-height-base: 1.5;      // Alto de línea base
+
+$padding-base: 1rem;         // Padding base
+$margin-base: 1rem;          // Margin base
+
+$border-radius: 4px;         // Radio de bordes por defecto
+$border-radius-large: 10px;  // Bordes más grandes
+
+$shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);  // Sombra ligera
+$shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.2);  // Sombra más fuerte
+
+// ----------- BREAKPOINTS -------------
+$breakpoint-sm: 576px;   // Pantallas pequeñas (móviles)
+$breakpoint-md: 768px;   // Pantallas medianas (tabletas)
+$breakpoint-lg: 1024px;  // Pantallas grandes (laptops)
+$breakpoint-xl: 1200px;  // Pantallas muy grandes (pantallas grandes)

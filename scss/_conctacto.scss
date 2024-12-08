@@ -1,0 +1,115 @@
+// _contacto.scss
+
+@use 'variables';
+@use 'mixins';
+
+// Estilo general para la sección de contacto
+.contacto {
+    background-color: $color-light;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+// Título de la sección
+.contacto h2 {
+    font-size: 2rem;
+    color: $color-primary;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+// Estilo para el formulario
+form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+// Estilos para los campos de entrada
+input, textarea {
+    padding: 0.75rem;
+    font-size: $font-size-small;
+    border: 1px solid $color-gray;
+    border-radius: 4px;
+    background-color: $color-white;
+    color: $color-black;
+    transition: all 0.3s ease;
+    
+    &:focus {
+        border-color: $color-primary;
+        outline: none;
+        box-shadow: 0 0 5px rgba($color-primary, 0.5);
+    }
+}
+
+// Estilos para el campo de texto (textarea)
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.acepto_1 {
+    color: #098 !important;
+}
+
+// Estilos para los botones
+button[type='submit'] {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1rem 2rem;
+    font-size: $font-size-button;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background-color: $color-dark;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Mensajes de validación
+.success-message {
+    background-color: #155724;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+// Estilo responsive
+@media (max-width: 768px) {
+    .contacto {
+        padding: 2rem 1rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    button[type='submit'] {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

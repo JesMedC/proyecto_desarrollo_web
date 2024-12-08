@@ -1,0 +1,162 @@
+@use 'variables' as *;  // Importa las variables
+@use 'sass:math'; // Importamos el módulo math para evitar la deprecación en divisiones
+
+// Estilos globales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary; // Usamos la fuente primaria definida en _variables.scss
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-dark;
+    background-color: $color-light;
+    padding: $padding-base;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// Encabezado (header)
+.header {
+    background-color: $color-primary;
+    padding: math.div($padding-base, 2); // Usamos math.div para evitar la deprecación
+    box-shadow: $shadow-light;
+    color: $color-light;
+}
+
+// Enlaces
+a {
+    text-decoration: none;
+    color: inherit; // Hereda el color del contenedor
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}
+
+// Botones
+.button {
+    background-color: $color-primary;
+    color: $color-light;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: $border-radius;
+    font-size: $font-size-lg;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+
+    &.btn-large {
+        font-size: $font-size-lg;
+        padding: 1rem 2rem;
+    }
+
+    &.btn-small {
+        font-size: $font-size-sm;
+        padding: 0.5rem 1rem;
+    }
+}
+
+// Formulario
+.formulario {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: $padding-base;
+    background-color: $color-gray-light;
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
+
+    .titulo_formulario {
+        font-size: 2em;
+        color: $color-dark;
+        text-align: center;
+        margin-bottom: $margin-base;
+    }
+
+    .input_contacto {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        border: 1px solid $color-border;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+
+        &.textarea {
+            resize: vertical;
+        }
+    }
+
+    .boton-personalizado {
+        width: 100%;
+        padding: 12px;
+        background-color: $color-primary;
+        color: $color-light;
+        border: none;
+        border-radius: $border-radius;
+        font-size: $font-size-lg;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+}
+
+// -------------------------- MEDIA QUERIES ------------------------
+// Pantallas medianas y pequeñas
+@media (max-width: $breakpoint-md) {
+    body {
+        font-size: $font-size-sm;
+    }
+
+    .header {
+        padding: math.div($padding-base, 4); // Usamos math.div para evitar la deprecación
+    }
+}
+
+// Pantallas pequeñas (móviles)
+@media (max-width: $breakpoint-sm) {
+    .header {
+        padding: math.div($padding-base, 6); // Usamos math.div para evitar la deprecación
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+        font-size: $font-size-sm;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+}
+
+// -------------------------- MIXINS -----------------------------
+
+// Mixin para aplicar sombras
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// Mixin para border-radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// Mixin para transiciones
+@mixin transition($property, $time, $ease) {
+    transition: $property $time $ease;
+}

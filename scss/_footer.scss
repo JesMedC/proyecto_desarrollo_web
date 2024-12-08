@@ -1,0 +1,53 @@
+// _base.scss
+
+@use 'variables';  // Importa las variables
+@use 'mixins';
+
+// Aplicar estilo global al body
+body {
+    display: flex;
+    flex-direction: column;  // Dirección de los elementos en columna
+    min-height: 100vh;        // Asegura que el body ocupe al menos el 100% de la altura de la ventana
+}
+
+// Contenedor principal (contenido principal de la página)
+.main-content {
+    flex: 1; // El contenido principal toma el espacio disponible
+    padding-bottom: 50px; // Asegura que no se solape con el pie de página (ajustar según el tamaño del footer)
+}
+
+// Pie de página
+footer {
+    background-color: variables.$color-primary;
+    color: variables.$color-light;
+    padding: 0.3rem 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; // Esto asegura que el pie de página se desplace hacia el final
+}
+
+// Puedes agregar más personalización en tu pie de página como antes
+.social-icon {
+    font-size: 1.5rem;
+    color: variables.$color-light;
+    margin: 0 20px;
+    @include mixins.transition(color 0.3s);
+}
+
+.social-icon:hover {
+    color: variables.$color-dark;
+}
+
+footer .copyright {
+    margin-top: 1rem;
+    font-size: variables.$font-size-sm;
+    color: variables.$color-gray-light;
+}
+
+@media (max-width: variables.$breakpoint-md) {
+    .social-icon {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+}
