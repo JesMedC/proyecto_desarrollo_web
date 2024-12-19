@@ -1,0 +1,31 @@
+// _fonts.scss
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("../asset/fonts/Fira_Sans/FiraSans-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("../asset/fonts/Fira_Sans/FiraSans-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("../asset/fonts/Fira_Sans/FiraSans-Regular.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("../asset/fonts/Fira_Sans/FiraSans-Medium.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("../asset/fonts/Fira_Sans/FiraSans-Bold.ttf") format("truetype");
+    font-weight: 900;
+}
