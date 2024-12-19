@@ -94,7 +94,7 @@ body {
   padding: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #fff;
-  padding-top: 2px;
+  padding-bottom: 1em;
 }
 
 a {
@@ -191,8 +191,9 @@ a:hover {
 }
 .titulo {
   color: #009688 !important;
-  padding-top: 0.5em !important;
+  padding-top: 1.5em !important;
   font-size: 1.8em;
+  margin-left: 2%;
 }
 
 .navbar {
@@ -422,7 +423,6 @@ a {
 
 .contacto {
   background-color: #fff;
-  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -436,7 +436,7 @@ a {
   font-size: 2rem;
   color: #009688;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 form {

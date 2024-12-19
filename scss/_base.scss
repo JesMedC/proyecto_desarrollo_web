@@ -26,7 +26,7 @@ body {
     padding: math.div($padding-base, 2); // Usamos math.div para evitar la deprecación
     box-shadow: $shadow-light;
     color: $color-light;
-    padding-top: 2px;
+    padding-bottom: 1em;
 }
 
 // Enlaces
@@ -164,7 +164,8 @@ a {
 
 .titulo {
     color:  #009688 !important;
-    padding-top: 0.5em !important;
+    padding-top: 1.5em !important;
     font-size: 1.8em;
+    margin-left: 2%;
 }
 

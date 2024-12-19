@@ -4,7 +4,7 @@
 // Estilo general para la sección de contacto
 .contacto {
     background-color: variables.$color-light; // Cambié de $color-white a $color-light para usar la variable correcta
-    padding: 4rem 2rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
     font-size: 2rem;
     color: variables.$color-primary; // Asegúrate de usar el nombre correcto de la variable
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 // Estilo para el formulario
