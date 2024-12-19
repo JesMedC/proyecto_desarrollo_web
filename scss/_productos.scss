@@ -11,7 +11,7 @@ a {
     padding: 3em;  // Utiliza la variable para el padding
 }
 .div_aside {
-    padding-top: 3.5em;  // Utiliza la variable para el padding
+    padding-top: 4em;  // Utiliza la variable para el padding
 }
 /* Estilo para la sección de productos */
 .section_producto_2 {
@@ -33,7 +33,7 @@ a {
 .div_aside_producto_2 {
     background-color: variables.$color-gray-light;  // Fondo gris claro
     border-radius: variables.$border-radius;  // Bordes redondeados
-    padding: 0.5rem;
+    padding: 1.5rem;
     box-shadow: variables.$shadow-light;  // Sombra ligera
     display: flex;
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
@@ -58,7 +58,7 @@ a {
 /* Estilos de los títulos y los textos */
 .titulo_secundario_2 {
     font-size: variables.$font-size-lg;  // Usar tamaño de fuente grande
-    color: variables.$color-dark;  // Color gris oscuro para los títulos
+    color: variables.$color-secondary;  // Color gris oscuro para los títulos
     margin-bottom: 1rem;
 }
 

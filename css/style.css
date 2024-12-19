@@ -191,6 +191,8 @@ a:hover {
 }
 .titulo {
   color: #009688 !important;
+  padding-top: 0.5em !important;
+  font-size: 1.8em;
 }
 
 .navbar {
@@ -343,7 +345,7 @@ a {
 }
 
 .div_aside {
-  padding-top: 3.5em;
+  padding-top: 4em;
 }
 
 /* Estilo para la sección de productos */
@@ -368,7 +370,7 @@ a {
 .div_aside_producto_2 {
   background-color: #f4f4f4;
   border-radius: 4px;
-  padding: 0.5rem;
+  padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
@@ -392,7 +394,7 @@ a {
 /* Estilos de los títulos y los textos */
 .titulo_secundario_2 {
   font-size: 18px;
-  color: #333333;
+  color: #006659;
   margin-bottom: 1rem;
 }
 
