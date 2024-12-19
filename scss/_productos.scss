@@ -10,13 +10,15 @@ a {
 .main_2 {
     padding: 3em;  // Utiliza la variable para el padding
 }
-
+.div_aside {
+    padding-top: 3.5em;  // Utiliza la variable para el padding
+}
 /* Estilo para la sección de productos */
 .section_producto_2 {
     display: grid;
     grid-template-columns: 1fr; /* Columna única en pantallas pequeñas */
     gap: 1.5rem; /* Espacio entre las tarjetas de productos */
-    padding: 2rem 0;
+    padding: 0.5rem 0;
     
     @media (min-width: variables.$breakpoint-sm) {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
@@ -31,7 +33,7 @@ a {
 .div_aside_producto_2 {
     background-color: variables.$color-gray-light;  // Fondo gris claro
     border-radius: variables.$border-radius;  // Bordes redondeados
-    padding: 1.5rem;
+    padding: 0.5rem;
     box-shadow: variables.$shadow-light;  // Sombra ligera
     display: flex;
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */

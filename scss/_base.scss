@@ -26,6 +26,7 @@ body {
     padding: math.div($padding-base, 2); // Usamos math.div para evitar la deprecación
     box-shadow: $shadow-light;
     color: $color-light;
+    padding-top: 2px;
 }
 
 // Enlaces
@@ -160,3 +161,8 @@ a {
 @mixin transition($property, $time, $ease) {
     transition: $property $time $ease;
 }
+
+.titulo {
+    color:  #009688 !important;
+}
+
