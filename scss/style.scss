@@ -1,5 +1,6 @@
 // style.scss
 
+@use 'fonts'; // Agregar esta línea para importar los estilos de fuentes
 @use 'variables';
 @use 'mixins';
 @use 'home';
@@ -8,5 +9,7 @@
 @use 'footer';
 @use 'card';
 @use 'productos';
+@use 'contacto';
+
 
 // Otros estilos adicionales si es necesario...

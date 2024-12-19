@@ -408,3 +408,103 @@ a {
 .button_lo_quiero_2:hover {
   background-color: #006659;
 }
+
+.contacto {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  color: #009688;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  font-size: 14px;
+  border: 1px solid #777777;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333333;
+  transition: all 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.acepto_1 {
+  color: #098 !important;
+}
+
+button[type=submit] {
+  background-color: #009688;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button[type=submit]:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+button[type=submit]:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  background-color: #28a745;
+  color: #28a745;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.error-message {
+  background-color: #dc3545;
+  color: #dc3545;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contacto {
+    padding: 2rem 1rem;
+  }
+  form {
+    width: 90%;
+  }
+  button[type=submit] {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
